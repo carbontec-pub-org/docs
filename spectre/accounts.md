@@ -37,7 +37,7 @@ http://spectre.devgraphite.com/api
 Get balance for multiple addresses in a single call
 -------------
 
-Returns the balance of the accounts from a list of addresses.
+Returns the balance of the accounts from a list of addresses (maximum of 20 addresses per call).
 
 #### Sample request
 
@@ -77,6 +77,30 @@ http://spectre.devgraphite.com/api
             "balance": "0"
         }
     ]
+}
+```
+
+Get the total number of wallet addresses
+-------------
+
+Returns the total number of wallet addresses.
+
+#### Sample request
+
+```
+http://spectre.devgraphite.com/api
+   ?module=account
+   &action=gettotalwalletcount
+   &apikey=YourApiKeyToken
+```
+
+#### Sample response
+
+``` json
+{
+    "status": "1",
+    "message": "OK",
+    "result": "264567"
 }
 ```
 
@@ -132,7 +156,8 @@ http://spectre.devgraphite.com/api
             "to": "0x7d42ced9fc90b2edc5dc19c7b704203bf506eb42",
             "transactionIndex": "0",
             "receiptStatus": "1",
-            "value": "0"
+            "value": "0",
+            "type": "0"
         },
         {
             "blockHash": "0xf6381f56d6caca17c4c4e336bd6e4171f284aa906a78b02580bea578fc4919d1",
@@ -154,7 +179,8 @@ http://spectre.devgraphite.com/api
             "to": "0x7d42ced9fc90b2edc5dc19c7b704203bf506eb42",
             "transactionIndex": "0",
             "receiptStatus": "1",
-            "value": "0"
+            "value": "0",
+            "type": "0"
         }
     ]
 }
