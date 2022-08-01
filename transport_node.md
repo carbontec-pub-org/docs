@@ -1,4 +1,4 @@
-# Graphite transport node testnet setup.
+# Polymer testnet setup.
 
 ## Requirements
 
@@ -9,8 +9,22 @@ Make sure you login into carbontec public registry. In order to do that use foll
 ```bash
 docker login https://registry.devgraphite.com
 ```
-now promt will be ask for credentials.
+now promt will be ask for credentials. Use next credentials to identify your slf.
 
+Pull latest docker image.
+```bash
+docker pull registry.devgraphite.com/polymer-testnet:amd64
+```
+
+Cleanup old containers if needed.
+```bash
+docker rm --force polymer-testnet
+```
+
+Wipe previous data folder if needed.
+```bash 
+sudo rm -rf /home/User/polymer-data && mkdir /home/User/polymer-data
+```
 
 ### Anonymous entrypoint node setup instructions.
 
