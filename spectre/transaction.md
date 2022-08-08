@@ -20,7 +20,7 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| txhash | hash of contents of the transaction |
+| txhash* | hash of contents of the transaction |
 
 #### Sample response
 
@@ -73,7 +73,7 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| txhash | the strings representing the hash to check for balance, separated by `,` |
+| txhash* | the strings representing the hash to check for balance, separated by `,` |
 
 #### Sample response
 
@@ -167,7 +167,7 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| txhash | hash of contents of the transaction |
+| txhash* | hash of contents of the transaction |
 
 #### Sample response
 
@@ -200,7 +200,7 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| txhash | hash of contents of the transaction |
+| txhash* | hash of contents of the transaction |
 
 #### Sample response
 
