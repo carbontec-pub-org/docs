@@ -21,8 +21,8 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| address | the string representing the address to check for balance |
-| tag  | the string pre-defined block parameter, either `earliest`, `pending` or `latest` |
+| address* | the string representing the address to check for balance |
+| tag*  | the string pre-defined block parameter, either `earliest`, `pending` or `latest` |
 
 #### Sample response
 
@@ -54,8 +54,8 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| address | the strings representing the addresses to check for balance, separated by `,` |
-| tag  | the string pre-defined block parameter, either `earliest`, `pending` or `latest` |
+| address* | the strings representing the addresses to check for balance, separated by `,` |
+| tag* | the string pre-defined block parameter, either `earliest`, `pending` or `latest` |
 
 #### Sample response
 
@@ -118,6 +118,9 @@ http://spectre.devgraphite.com/api
    &address=0xe6f0742f01fbab90d76e87ac291be94ff2103363
    &startblock=0
    &endblock=99999999
+   &offset=10
+   &limit=10
+   &sort=asc
    &apikey=YourApiKeyToken
 ```
 
@@ -125,9 +128,12 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| address | the string representing the address to check for normal transactions |
-| startblock | the integer block number to start searching for transactions |
-| endblock | the integer block number to stop searching for transactions |
+| address* | the string representing the address to check for normal transactions |
+| startblock* | the integer block number to start searching for transactions |
+| endblock* | the integer block number to stop searching for transactions |
+| offset | skips the `offset` records before beginning to return the records |
+| limit | the number of records displayed per page |
+| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -200,6 +206,9 @@ http://spectre.devgraphite.com/api
    &address=0xe6f0742f01fbab90d76e87ac291be94ff2103363
    &startblock=0
    &endblock=99999999
+   &offset=10
+   &limit=10
+   &sort=asc
    &apikey=YourApiKeyToken
 ```
 
@@ -207,9 +216,12 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| address | the string representing the address to check for internal transactions |
-| startblock | the integer block number to start searching for transactions |
-| endblock | the integer block number to stop searching for transactions |
+| address* | the string representing the address to check for internal transactions |
+| startblock* | the integer block number to start searching for transactions |
+| endblock* | the integer block number to stop searching for transactions |
+| offset | skips the `offset` records before beginning to return the records |
+| limit | the number of records displayed per page |
+| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -266,6 +278,9 @@ http://spectre.devgraphite.com/api
    ?module=account
    &action=txlistinternal
    &txhash=0x40eb908387324f2b575b4879cd9d7188f69c8fc9d87c901b9e2daaea4b442170
+   &offset=10
+   &limit=10
+   &sort=asc
    &apikey=YourApiKeyToken
 ```
 
@@ -273,7 +288,10 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| txhash | the string representing the transaction hash to check for internal transactions |
+| txhash* | the string representing the transaction hash to check for internal transactions |
+| offset | skips the `offset` records before beginning to return the records |
+| limit | the number of records displayed per page |
+| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -313,6 +331,9 @@ http://spectre.devgraphite.com/api
    &action=txlistinternal
    &startblock=0
    &endblock=99999999
+   &offset=10
+   &limit=10
+   &sort=asc
    &apikey=YourApiKeyToken
 ```
 
@@ -320,8 +341,11 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| startblock | the integer block number to start searching for transactions |
-| endblock | the integer block number to stop searching for transactions |
+| startblock* | the integer block number to start searching for transactions |
+| endblock* | the integer block number to stop searching for transactions |
+| offset | skips the `offset` records before beginning to return the records |
+| limit | the number of records displayed per page |
+| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -386,8 +410,43 @@ http://spectre.devgraphite.com/api
 
 | Parameter | Description |
 | --------- | ----------- |
-| address | the string representing the address to get a nonce |
-| pending | optional, the string either `true` or `false`, default value is `true` |
+| address* | the string representing the address to get a nonce |
+| pending | the string either `true` or `false`, default value is `true` |
+
+#### Sample response
+
+``` json
+{
+   "status": "1",
+   "message": "OK",
+   "result": "56" 
+}
+```
+
+Get pending transactions
+-------------
+
+Returns a list of pending transactions.
+
+#### Sample request
+
+```
+http://spectre.devgraphite.com/api
+   ?module=account
+   &action=pendingtxlist
+   &offset=10
+   &limit=10
+   &sort=asc
+   &apikey=YourApiKeyToken
+```
+
+#### Request query parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| offset | skips the `offset` records before beginning to return the records |
+| limit | the number of records displayed per page |
+| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
