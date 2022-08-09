@@ -422,38 +422,3 @@ http://spectre.devgraphite.com/api
    "result": "56" 
 }
 ```
-
-Get pending transactions
--------------
-
-Returns a list of pending transactions.
-
-#### Sample request
-
-```
-http://spectre.devgraphite.com/api
-   ?module=account
-   &action=pendingtxlist
-   &offset=10
-   &limit=10
-   &sort=asc
-   &apikey=YourApiKeyToken
-```
-
-#### Request query parameters
-
-| Parameter | Description |
-| --------- | ----------- |
-| offset | skips the `offset` records before beginning to return the records |
-| limit | the number of records displayed per page |
-| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
-
-#### Sample response
-
-``` json
-{
-   "status": "1",
-   "message": "OK",
-   "result": "56" 
-}
-```
