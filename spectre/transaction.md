@@ -238,3 +238,120 @@ http://spectre.devgraphite.com/api
     "result": "308227"
 }
 ```
+
+Get pending transactions
+-------------
+
+Returns a list of pending transactions.
+
+#### Sample request
+
+```
+http://spectre.devgraphite.com/api
+   ?module=account
+   &action=pendingtxlist
+   &offset=10
+   &limit=10
+   &sort=asc
+   &apikey=YourApiKeyToken
+```
+
+#### Request query parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| offset | skips the `offset` records before beginning to return the records |
+| limit | the number of records displayed per page |
+| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+
+#### Sample response
+
+``` json
+{
+   "status": "1",
+   "message": "OK",
+   "result": "56" 
+}
+```
+
+Get a list of 'normal' transactions
+-------------
+
+Returns the list of 'normal' transactions.
+
+#### Sample request
+
+```
+http://spectre.devgraphite.com/api
+   ?module=transaction
+   &action=txlist
+   &offset=10
+   &limit=10
+   &sort=asc
+   &apikey=YourApiKeyToken
+```
+
+#### Request query parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| offset | skips the `offset` records before beginning to return the records |
+| limit | the number of records displayed per page |
+| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+
+#### Sample response
+
+``` json
+{
+    "status": "1",
+    "message": "OK",
+    "result": [
+        {
+            "blockHash": "0x7c61ad3d0eea32c8fade634a611c0cd29079524c003c71f2e7bab04bf81759ce",
+            "blockNumber": "2",
+            "confirmations": "404762",
+            "contractAddress": null,
+            "cumulativeGasUsed": "21336",
+            "from": "0xe6f0742f01fbab90d76e87ac291be94ff2103363",
+            "gas": "26000",
+            "gasPrice": "18000000000",
+            "gasUsed": "21336",
+            "hash": "0x0e63f1264a1e43eeb582de345694797487bae1b82a5cfaee57ce3966e159d5b2",
+            "input": "0x7c3faaef29ba1203364ff8b41f1b0141a6ea2b3ecf",
+            "isError": "0",
+            "logs": [],
+            "nonce": "1",
+            "revertReason": null,
+            "timeStamp": "1656010239",
+            "to": "0x7d42ced9fc90b2edc5dc19c7b704203bf506eb42",
+            "transactionIndex": "0",
+            "receiptStatus": "1",
+            "value": "0",
+            "type": "0"
+        },
+        {
+            "blockHash": "0xf6381f56d6caca17c4c4e336bd6e4171f284aa906a78b02580bea578fc4919d1",
+            "blockNumber": "3",
+            "confirmations": "404761",
+            "contractAddress": null,
+            "cumulativeGasUsed": "21000",
+            "from": "0xe6f0742f01fbab90d76e87ac291be94ff2103363",
+            "gas": "26000",
+            "gasPrice": "18000000000",
+            "gasUsed": "21000",
+            "hash": "0x0359e85ce8d1de5179a65a979b87a66b76c8c1d28bdfac70b405dbbafdb7f427",
+            "input": "0x",
+            "isError": "0",
+            "logs": [],
+            "nonce": "2",
+            "revertReason": null,
+            "timeStamp": "1656010893",
+            "to": "0x7d42ced9fc90b2edc5dc19c7b704203bf506eb42",
+            "transactionIndex": "0",
+            "receiptStatus": "1",
+            "value": "0",
+            "type": "0"
+        }
+    ]
+}
+```
