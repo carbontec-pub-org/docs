@@ -1,48 +1,60 @@
-# Polymer testnet setup.
+# Polymer testnet setup
 
 ## Requirements
 
-Make sure you have fresh docker installed.\
-Make sure you have opened and not binded with other applications 8575/tcp, 30311/udp ports in order to communicated with node via rpc endpoint(8575) and also node can communicate with other nodes in network via p2p(30311). Websocket modules avialable at 8576 port. Also make sure you dont covered by nat or any other network stuff.
-Make sure you login into carbontec public registry. In order to do that use following commands:
+Make sure your docker version is up to date.
+Make sure you have opened and not bound 8575/TCP, and 30311/UDP ports with any other applications in order to communicate with the node via RPC endpoint(8575). Graphite nodes can also communicate with other nodes in the network through P2P (30311) Websocket modules available at the 8576 port. 
+Make sure your network is not covered by NAT or any other network stuff.
+Make sure you are logging into Carbontec public registry. In order to do that use the following command:
 
 ```bash
 docker login https://registry.devgraphite.com
 ```
-now promt will be ask for credentials. Use next credentials to identify your slf.
+Now prompt will ask for credentials. We keep them private for now, contact developers to get yours.
+Pull the latest docker image.
 
-Pull latest docker image.
 ```bash
 docker pull registry.devgraphite.com/polymer-testnet:amd64
 ```
 
-Cleanup old containers if needed.
+Clean up old containers if needed.
+
 ```bash
 docker rm --force polymer-testnet
 ```
 
-Wipe previous data folder if needed.
+Wipe the previous data folder if needed.
+
 ```bash 
 sudo rm -rf /home/User/polymer-data && mkdir /home/User/polymer-data
 ```
 
-### Anonymous entrypoint node setup instructions.
+### Anonymous entry-point node setup instructions.
 
-In order to run localy with docker you need to create folder for persist data inside container. In example folder is ```/home/User/polymer-data``` . \
-After creating folder you need to run init task to inject genesis and persist it. You can do it with following command:
+To run a local docker node you’ll need to create a folder to persist data inside a container. In the following example this folder is located at  ```/home/User/polymer-data``` . \
+
+After creating the folder run the init task to inject genesis and persist it. Use the following command:
+
 ```bash
 docker run -it -v /home/User/polymer-data:/var/lib/graphite/data registry.devgraphite.com/polymer-testnet:amd64 graphite --datadir /var/lib/graphite/data init /var/lib/graphite/genesis.json
 ```
-Now you can run your node. In order to do it use following command:
+
+Now you can run your node. Use the following command to initialize:
+
 ```bash
 docker run -d --name polymer-testnet --network host -v /home/User/polymer-data:/var/lib/graphite/data registry.devgraphite.com/polymer-testnet:amd64 graphite --datadir /var/lib/graphite/data --config /var/lib/graphite/config.yaml
 ```
-Now you can check node sync proggress with following command:
+
+Check node sync progress with
+
 ```bash
 docker logs polymer-testnet --follow
 ```
-To interact node with graphite js console use following command:
+
+To interact with the node through Graphite JS console use 
+
 ```bash
 docker exec -it polymer-testnet graphite attach /var/lib/graphite/data/geth.ipc
 ```
-Node rpc api is avaialable at ```http://127.0.0.1:8575```
+
+Node RPC API is available at ```http://127.0.0.1:8575```
