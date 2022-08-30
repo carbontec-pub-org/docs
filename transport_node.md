@@ -31,7 +31,7 @@ sudo rm -rf /home/User/polymer-data && mkdir /home/User/polymer-data
 
 ### Anonymous entry-point node setup instructions.
 
-To run a local docker node you’ll need to create a folder to persist data inside a container. In the following example this folder is located at  ```/home/User/polymer-data``` . \
+To run a local docker node you’ll need to create a folder to persist data inside a container. In the following example this folder is located at  ```/home/User/polymer-data``` 
 
 After creating the folder run the init task to inject genesis and persist it. Use the following command:
 
