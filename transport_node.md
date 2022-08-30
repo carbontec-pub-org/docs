@@ -3,14 +3,18 @@
 ## Requirements
 
 Make sure your docker version is up to date.
+
 Make sure you have opened and not bound 8575/TCP, and 30311/UDP ports with any other applications in order to communicate with the node via RPC endpoint(8575). Graphite nodes can also communicate with other nodes in the network through P2P (30311) Websocket modules available at the 8576 port. 
+
 Make sure your network is not covered by NAT or any other network stuff.
+
 Make sure you are logging into Carbontec public registry. In order to do that use the following command:
 
 ```bash
 docker login https://registry.devgraphite.com
 ```
 Now prompt will ask for credentials. We keep them private for now, contact developers to get yours.
+
 Pull the latest docker image.
 
 ```bash
