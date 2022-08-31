@@ -4,7 +4,7 @@ Blocks
 Get the most recent block number
 -------------
 
-Returns number of the most recent block.
+Returns the number of the most recent block.
 
 #### Sample request
 
@@ -42,9 +42,9 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| blockno* | a nonnegative integer that represents the block number |
+| blockno* | Nonnegative integer that defines the block number |
 
 #### Sample response
 
@@ -94,9 +94,9 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| blockhash* | hash of contents of the block |
+| blockhash* | Block content hash |
 
 #### Sample response
 
@@ -148,11 +148,11 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| startblock* | the integer block number that represents the first number of range |
-| endblock* | the integer block number that represents the last number of range |
-| sort* | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+| startblock* | Integer block number that defines the first number of range |
+| endblock* | Integer block number that defines the last number of range |
+| sort* | Sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -227,10 +227,10 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| timestamp* | a nonnegative integer that represents the block timestamp (Unix timestamp in seconds) |
-| closest* | direction to find the closest block number to given timestamp. Available values: `before` and `after` |
+| timestamp* | Nonnegative integer that defines the block timestamp (Unix timestamp in seconds) |
+| closest* | Direction to find the closest block number to a given timestamp. Available values: `before` and `after` |
 
 #### Sample response
 
