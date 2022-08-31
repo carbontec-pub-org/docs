@@ -19,10 +19,10 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| address* | the string representing the address to check for balance |
-| tag*  | the string pre-defined block parameter, either `earliest`, `pending` or `latest` |
+| address* | String defines the address to check for the balance |
+| tag*  | String defines the pre-defined block parameter, either `earliest`, `pending` or `latest` |
 
 #### Sample response
 
@@ -37,7 +37,7 @@ http://spectre.devgraphite.com/api
 Get balance for multiple addresses in a single call
 -------------
 
-Returns the balance of the accounts from a list of addresses (maximum of 20 addresses per call).
+Returns the balance of all accounts from a list of addresses (maximum of 20 addresses per call).
 
 #### Sample request
 
@@ -52,10 +52,10 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| address* | the strings representing the addresses to check for balance, separated by `,` |
-| tag* | the string pre-defined block parameter, either `earliest`, `pending` or `latest` |
+| address* | Strings define addresses to check for the balance, each separated by a comma (,) |
+| tag* | String represents the pre-defined block parameter, either `earliest`, `pending` or `latest` |
 
 #### Sample response
 
@@ -126,14 +126,14 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| address* | the string representing the address to check for normal transactions |
-| startblock* | the integer block number to start searching for transactions |
-| endblock* | the integer block number to stop searching for transactions |
-| offset | skips the `offset` records before beginning to return the records |
-| limit | the number of records displayed per page |
-| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+| address* | String defines the address to check for normal transactions |
+| startblock* | Integer block number defines when to start searching for transactions |
+| endblock* | Integer block number defines when to stop searching for transactions |
+| offset | Skips the `offset` records when responding |
+| limit | Number of records displayed per page |
+| sort | Sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -214,14 +214,14 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| address* | the string representing the address to check for internal transactions |
-| startblock* | the integer block number to start searching for transactions |
-| endblock* | the integer block number to stop searching for transactions |
-| offset | skips the `offset` records before beginning to return the records |
-| limit | the number of records displayed per page |
-| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+| address* | String defines the address to check for internal transactions |
+| startblock* | Integer block number defines when to start searching for transactions |
+| endblock* | Integer block number defines when to stop searching for transactions |
+| offset | Skips the `offset` records when responding |
+| limit | Number of records displayed per page |
+| sort | Sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -286,12 +286,12 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| txhash* | the string representing the transaction hash to check for internal transactions |
-| offset | skips the `offset` records before beginning to return the records |
-| limit | the number of records displayed per page |
-| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+| txhash* | String defines the transaction hash to check for internal transactions |
+| offset | Skips the `offset` records when responding |
+| limit | Number of records displayed per page |
+| sort | Sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -339,13 +339,13 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| startblock* | the integer block number to start searching for transactions |
-| endblock* | the integer block number to stop searching for transactions |
-| offset | skips the `offset` records before beginning to return the records |
-| limit | the number of records displayed per page |
-| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+| startblock* | Integer block number defines when to start searching for transactions |
+| endblock* | Integer block number defines when to stop searching for transactions |
+| offset | Skips the `offset` records when responding |
+| limit | Number of records displayed per page |
+| sort | Sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -408,10 +408,10 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| address* | the string representing the address to get a nonce |
-| pending | the string either `true` or `false`, default value is `true` |
+| address* | String defines the address to get a nonce |
+| pending | String either `true` or `false`, default value is `true` |
 
 #### Sample response
 
