@@ -18,9 +18,9 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| txhash* | hash of contents of the transaction |
+| txhash* | Hash of transaction content  |
 
 #### Sample response
 
@@ -71,9 +71,9 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| txhash* | the strings representing the hash to check for balance, separated by `,` |
+| txhash* | Strings define the hash to check for the balance, each separated by a comma (,) |
 
 #### Sample response
 
@@ -165,9 +165,9 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| txhash* | hash of contents of the transaction |
+| txhash* | Hash of transaction content |
 
 #### Sample response
 
@@ -198,9 +198,9 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| txhash* | hash of contents of the transaction |
+| txhash* | Hash of transaction content |
 
 #### Sample response
 
@@ -258,11 +258,11 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| offset | skips the `offset` records before beginning to return the records |
-| limit | the number of records displayed per page |
-| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+| offset | Skips the `offset` records when responding |
+| limit | Number of records displayed per page |
+| sort | Sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
@@ -293,11 +293,11 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| offset | skips the `offset` records before beginning to return the records |
-| limit | the number of records displayed per page |
-| sort | the sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
+| offset | Skips the `offset` records when responding |
+| limit | Number of records displayed per page |
+| sort | Sorting preference, use `asc` to sort by ascending and `desc` to sort by descending |
 
 #### Sample response
 
