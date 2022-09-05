@@ -28,7 +28,7 @@ http://spectre.devgraphite.com/api
 Get ABI for verified contract
 -------------
 
-Returns ABI for verified contract.
+Returns the ABI for verified contract.
 
 #### Sample request
 
@@ -42,9 +42,9 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| address* | address hex-string used for identifying contract |
+| address* | Hex-string address is used to identify a contract |
 
 #### Sample response
 
@@ -59,7 +59,7 @@ http://spectre.devgraphite.com/api
 Get contract source code for verified contract
 -------------
 
-Returns source code for verified contract.
+Returns source code for a verified contract.
 
 #### Sample request
 
@@ -73,9 +73,9 @@ http://spectre.devgraphite.com/api
 
 #### Request query parameters
 
-| Parameter | Description |
+| **Parameter** | **Description** |
 | --------- | ----------- |
-| address* | address hex-string used for identifying contract |
+| address* | Hex-string address is used to identify a contract |
 
 #### Sample response
 
@@ -108,6 +108,7 @@ http://spectre.devgraphite.com/api
 ```
 
 Body (json):
+
 ``` json
 {
     "addressHash": "0x9271602210f21ab82999dd43792a12e63c6e3269",
